@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canada — June 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+    font-weight: 300;
+    background: #faf8f4;
+    color: #2a2a2a;
+    line-height: 1.7;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, #0d2b45 0%, #1a4a6b 50%, #c8392b 100%);
+    color: white;
+    text-align: center;
+    padding: 72px 40px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f0c060;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: #f0c060;
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    max-width: 500px;
+    margin: 0 auto 32px;
+    position: relative;
+    font-weight: 300;
+  }
+  .hero-dates {
+    display: inline-block;
+    border: 1px solid rgba(240,192,96,0.6);
+    color: #f0c060;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 24px;
+    border-radius: 30px;
+    position: relative;
+  }
+
+  /* INTRO */
+  .intro {
+    max-width: 700px;
+    margin: 56px auto 0;
+    padding: 0 32px 48px;
+    text-align: center;
+  }
+  .intro p {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.8;
+  }
+  .intro p + p { margin-top: 16px; }
+
+  /* DIVIDER */
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: #c8392b;
+    margin: 0 auto 48px;
+  }
+
+  /* SECTION LABEL */
+  .section-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c8392b;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    text-align: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+  }
+
+  /* PLANS */
+  .plans-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px 64px;
+  }
+  .plans-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .plan-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .plan-header-a {
+    background: linear-gradient(135deg, #0d2b45 0%, #1a5276 100%);
+    color: white;
+    padding: 32px 28px 28px;
+  }
+  .plan-header-b {
+    background: linear-gradient(135deg, #1a3a1a 0%, #27643f 100%);
+    color: white;
+    padding: 32px 28px 28px;
+  }
+  .plan-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 10px;
+  }
+  .plan-card h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .plan-card .plan-tagline {
+    font-size: 14px;
+    opacity: 0.85;
+    font-weight: 300;
+  }
+  .plan-route {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.65;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .plan-body {
+    padding: 28px;
+  }
+
+  /* DAYS */
+  .day-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .day-item:last-child { margin-bottom: 0; }
+  .day-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .day-num-a { background: #e8f0f8; color: #0d2b45; }
+  .day-num-b { background: #e8f5ec; color: #1a3a1a; }
+  .day-text h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+  }
+  .day-text .day-date {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 4px;
+  }
+  .day-text p {
+    font-size: 13.5px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .highlight {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  /* CULTURE STRIP */
+  .culture-strip {
+    margin-top: 24px;
+    padding: 18px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+  .culture-strip-a { background: #edf3fa; }
+  .culture-strip-b { background: #edf7ef; }
+  .culture-strip .culture-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .culture-strip ul {
+    list-style: none;
+    padding: 0;
+  }
+  .culture-strip ul li {
+    font-size: 13px;
+    color: #444;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-left: 16px;
+    position: relative;
+  }
+  .culture-strip ul li:last-child { border-bottom: none; }
+  .culture-strip ul li::before { content: "–"; position: absolute; left: 0; color: #aaa; }
+
+  /* CAVEAT */
+  .caveat {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .caveat-a { background: #fef9ec; border-left: 3px solid #e6a817; }
+  .caveat-b { background: #f0faf5; border-left: 3px solid #27ae60; }
+  .caveat-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .caveat p { color: #555; }
+  .caveat strong { color: #333; }
+
+  /* CANADA DAY BANNER */
+  .canada-day {
+    max-width: 1100px;
+    margin: 0 auto 64px;
+    padding: 0 32px;
+  }
+  .canada-day-inner {
+    background: linear-gradient(135deg, #c8392b 0%, #e74c3c 100%);
+    border-radius: 12px;
+    padding: 36px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .canada-leaf {
+    font-size: 56px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .canada-day-text h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .canada-day-text p {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* AT A GLANCE */
+  .glance {
+    background: #0d2b45;
+    color: white;
+    padding: 56px 32px;
+  }
+  .glance-inner { max-width: 900px; margin: 0 auto; }
+  .glance .section-label { color: #f0c060; }
+  .glance .section-title { color: white; margin-bottom: 36px; }
+  .glance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .glance-card {
+    background: rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .glance-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f0c060;
+    margin-bottom: 12px;
+  }
+  .glance-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .glance-row:last-child { border-bottom: none; }
+  .glance-label { color: rgba(255,255,255,0.6); }
+  .glance-value { color: white; font-weight: 600; text-align: right; }
+  .glance-value.good { color: #7dcea0; }
+  .glance-value.caution { color: #f0c060; }
+  .glance-value.risk { color: #ec7063; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 40px 32px;
+    background: #faf8f4;
+    border-top: 1px solid #eee;
+  }
+  .footer p {
+    font-size: 12px;
+    color: #aaa;
+    line-height: 1.7;
+  }
+  .footer a { color: #1a5276; text-decoration: none; }
+
+  @media (max-width: 700px) {
+    .plans-grid, .glance-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 36px; }
+    .canada-day-inner { flex-direction: column; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">June 28 – July 2, 2026</div>
+  <h1>Canada Trip<br><em>Two Options</em></h1>
+  <p class="hero-sub">Here's what I've been putting together. Two ways to do it. Read both before you decide.</p>
+  <div class="hero-dates">Dad's Research</div>
+</div>
+
+<!-- INTRO -->
+<div class="intro">
+  <p>I've been doing a lot of research on this and I think we have a genuinely great trip here either way. Both options start in Montreal. I've been interested in Montreal for a while — it's got a real arts and literary scene, great museums, good bookshops, and the neighborhoods are walkable and interesting. July 1 is Canada Day, which I didn't plan but worked out perfectly.</p>
+  <p>Option A uses the Amtrak train from New York to Montreal, which I think would be a cool experience. Option B skips that and goes straight to Montreal, then takes a Canadian train to Toronto. I'll lay out both. I lean toward Option B but I want you to see the whole picture.</p>
+</div>
+<div class="divider"></div>
+
+<!-- CANADA DAY BANNER -->
+<div class="canada-day">
+  <div class="canada-day-inner">
+    <div class="canada-leaf">🍁</div>
+    <div class="canada-day-text">
+      <h3>July 1 is Canada Day</h3>
+      <p>I didn't plan this but it worked out great. Both options have us in Canada on their biggest national holiday. Fireworks, music, the whole thing. Option A puts us in Montreal for the full day. Option B has us in Toronto. Either way, good timing.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PLANS -->
+<div class="plans-wrapper">
+  <div class="section-label">The Two Plans</div>
+  <div class="section-title">Here's What I Found</div>
+
+  <div class="plans-grid">
+
+    <!-- PLAN A -->
+    <div class="plan-card">
+      <div class="plan-header-a">
+        <div class="plan-tag">Option A</div>
+        <h2>The Train Idea</h2>
+        <p class="plan-tagline">Fly to New York, take the scenic Amtrak to Montreal, fly home from there.</p>
+        <div class="plan-route">IND &rarr; New York City &rarr; Amtrak &rarr; Montreal &rarr; IND</div>
+      </div>
+      <div class="plan-body">
+
+        <div class="day-item">
+          <div class="day-num day-num-a">1</div>
+          <div class="day-text">
+            <div class="day-date">Sunday, June 28</div>
+            <h4>New York — One Night</h4>
+            <p>Delta nonstop from Indy gets us to LaGuardia mid-morning. We have the afternoon. I was thinking the Strand bookstore, or just walk around Midtown. Early night because the train leaves at 7:15am.</p>
+          </div>
+        </div>
+
+        <div class="day-item">
+          <div class="day-num day-num-a">2</div>
+          <div class="day-text">
+            <div class="day-date">Monday, June 29</div>
+            <h4>The Adirondack Train</h4>
+            <p>This is the part I think would be really cool. The train goes through the Hudson Valley, the Adirondack Mountains, along Lake Champlain. Bring a book, obviously. It's about 11 hours and we get into <span class="highlight">Montreal Central</span> in the evening. I've wanted to do this ride for a while.</p>
+          </div>
+        </div>
+
+        <div class="day-item">
+          <div class="day-num day-num-a">3</div>
+          <div class="day-text">
+            <div class="day-date">Tuesday, June 30</div>
+            <h4>Montreal: Museums and Theater</h4>
+            <p>I want to spend the morning at the <span class="highlight">Montreal Museum of Fine Arts</span> — it's a real collection, not a tourist trap. Afternoon in Mile End, which is the literary neighborhood. There's an indie bookshop there called <span class="highlight">Drawn &amp; Quarterly</span> that I've read a lot about. And Les Miserables is playing at Theatre St-Denis that week, which seems like a good fit.</p>
+          </div>
+        </div>
+
+        <div class="day-item">
+          <div class="day-num day-num-a">4</div>
+          <div class="day-text">
+            <div class="day-date">Wednesday, July 1 — Canada Day</div>
+            <h4>Canada Day in Montreal</h4>
+            <p>The whole city is out. I want to walk the Plateau and Saint-Laurent. I also want to go to <span class="highlight">La Grande Bibliotheque</span> — it's Montreal's main public library but also just a genuinely interesting building. Fireworks over the St. Lawrence at night. I think this would be a good day.</p>
+          </div>
+        </div>
+
+        <div class="day-item">
+          <div class="day-num day-num-a">5</div>
+          <div class="day-text">
+            <div class="day-date">Thursday, July 2</div>
+            <h4>Fly Home</h4>
+            <p>Delta from Montreal through Atlanta or Detroit. We'd be home by early afternoon.</p>
+          </div>
+        </div>
+
+        <div class="culture-strip culture-strip-a">
+          <div class="culture-label">Places I Want to Go — Option A</div>
+          <ul>
+            <li>Montreal Museum of Fine Arts — serious collection, not touristy</li>
+            <li>Drawn &amp; Quarterly bookshop, Mile End — one of the best indie bookshops in North America apparently</li>
+            <li>La Grande Bibliotheque — Montreal's main library, also just a cool building</li>
+            <li>Pointe-a-Calliere Museum — archaeology museum built over actual excavated ruins in Old Montreal</li>
+            <li>Les Miserables at Theatre St-Denis — running through mid-July</li>
+            <li>Saint-Laurent and the Plateau on foot</li>
+          </ul>
+        </div>
+
+        <div class="caveat caveat-a">
+          <div class="caveat-icon">i</div>
+          <p><strong>One thing to know about the train:</strong> The Adirondack has had some summer service issues the last couple of years. It's running right now and I'm watching it. I'd want to confirm it's still on track around June 15 before we commit. If it's not running, we just do Option B instead — no big deal.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PLAN B -->
+    <div class="plan-card">
+      <div class="plan-header-b">
+        <div class="plan-tag">Option B — My Preference</div>
+        <h2>Montreal and Toronto</h2>
+        <p class="plan-tagline">Fly straight to Montreal, take a Canadian train to Toronto, fly home from there.</p>
+        <div class="plan-route">IND &rarr; Montreal &rarr; VIA Rail &rarr; Toronto &rarr; IND</div>
+      </div>
+      <div class="plan-body">
+
+        <div class="day-item">
+          <div class="day-num day-num-b">1</div>
+          <div class="day-text">
+            <div class="day-date">Sunday, June 28</div>
+            <h4>Arrive in Montreal</h4>
+            <p>Delta through Detroit gets us in before noon. I want to just walk the <span class="highlight">Mile End and Plateau</span> neighborhoods in the afternoon. This is where Leonard Cohen grew up, where a lot of artists and writers still live. It's not a tourist neighborhood, which is exactly why I want to go there first.</p>
+          </div>
+        </div>
+
+        <div class="day-item">
+          <div class="day-num day-num-b">2</div>
+          <div class="day-text">
+            <div class="day-date">Monday, June 29</div>
+            <h4>Full Day in Montreal</h4>
+            <p>Morning at the <span class="highlight">Montreal Museum of Fine Arts</span>. Then Old Montreal for the afternoon — the cobblestone streets, galleries, the waterfront. I want to find the <span class="highlight">Drawn &amp; Quarterly</span> bookshop in Mile End before we leave. Evening: Les Miserables is playing at Theatre St-Denis, which I think would be worth going to.</p>
+          </div>
+        </div>
+
+        <div class="day-item">
+          <div class="day-num day-num-b">3</div>
+          <div class="day-text">
+            <div class="day-date">Tuesday, June 30</div>
+            <h4>Train to Toronto</h4>
+            <p>We take the <span class="highlight">VIA Rail train to Toronto</span> mid-morning. I looked into Business Class and it's worth it — they serve a real meal, it's about 5 hours, and it's a comfortable ride. Toronto Union Station is one of those grand old train halls that's just nice to arrive into. I was thinking dinner in the <span class="highlight">Distillery District</span> that night — it's a historic industrial area that now has galleries and restaurants.</p>
+          </div>
+        </div>
+
+        <div class="day-item">
+          <div class="day-num day-num-b">4</div>
+          <div class="day-text">
+            <div class="day-date">Wednesday, July 1 — Canada Day</div>
+            <h4>Canada Day in Toronto</h4>
+            <p>I want to go to the <span class="highlight">Art Gallery of Ontario</span> in the morning. It's in a Frank Gehry building and the collection is really strong — Group of Seven, contemporary Canadian art. In the afternoon I want to find <span class="highlight">Type Books</span> or BMV on Bloor. Toronto has good independent bookshops. That evening there should be a show at one of the <span class="highlight">Mirvish theaters</span> on King Street — Toronto's theater scene is legitimately good.</p>
+          </div>
+        </div>
+
+        <div class="day-item">
+          <div class="day-num day-num-b">5</div>
+          <div class="day-text">
+            <div class="day-date">Thursday, July 2</div>
+            <h4>Fly Home</h4>
+            <p>Air Canada has a nonstop from Toronto to Indianapolis. About 2 hours. We'd be home by mid-afternoon.</p>
+          </div>
+        </div>
+
+        <div class="culture-strip culture-strip-b">
+          <div class="culture-label">Places I Want to Go — Option B</div>
+          <ul>
+            <li>Drawn &amp; Quarterly, Montreal — consistently listed as one of the best indie bookshops in North America</li>
+            <li>Montreal Museum of Fine Arts — I've been reading about their collection</li>
+            <li>Les Miserables at Theatre St-Denis — running through mid-July</li>
+            <li>Art Gallery of Ontario — Frank Gehry redesign, strong Canadian collection</li>
+            <li>Type Books / BMV, Toronto — good independent bookshops on Bloor</li>
+            <li>Mirvish theaters, King Street — Toronto takes theater seriously</li>
+            <li>Distillery District — historic area, now galleries and restaurants</li>
+          </ul>
+        </div>
+
+        <div class="caveat caveat-b">
+          <div class="caveat-icon">&#10003;</div>
+          <p><strong>Why I prefer this one:</strong> Two cities, more ground covered, and the Canadian train between them is reliable. No 7am stress the morning after we fly in. And if the Amtrak situation with Option A doesn't work out, this is just the plan anyway.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- AT A GLANCE -->
+<div class="glance">
+  <div class="glance-inner">
+    <div class="section-label">Quick Comparison</div>
+    <div class="section-title">Side by Side</div>
+    <div class="glance-grid">
+      <div class="glance-card">
+        <h4>Option A — The Train Idea</h4>
+        <div class="glance-row"><span class="glance-label">Opening city</span><span class="glance-value">New York City</span></div>
+        <div class="glance-row"><span class="glance-label">The journey</span><span class="glance-value">Amtrak Adirondack — scenic</span></div>
+        <div class="glance-row"><span class="glance-label">Canada Day</span><span class="glance-value good">Full day in Montreal</span></div>
+        <div class="glance-row"><span class="glance-label">Theater nights</span><span class="glance-value">1 — Les Mis, Montreal</span></div>
+        <div class="glance-row"><span class="glance-label">Key cultural stops</span><span class="glance-value">MMFA, Drawn &amp; Quarterly, BAnQ</span></div>
+        <div class="glance-row"><span class="glance-label">Bookshop potential</span><span class="glance-value good">High — Strand (NYC) + Mile End</span></div>
+        <div class="glance-row"><span class="glance-label">Train reliability</span><span class="glance-value caution">Monitor — book flexibly</span></div>
+        <div class="glance-row"><span class="glance-label">Pace</span><span class="glance-value">Slower — one city, deep</span></div>
+      </div>
+      <div class="glance-card">
+        <h4>Option B — Montreal and Toronto</h4>
+        <div class="glance-row"><span class="glance-label">Opening city</span><span class="glance-value">Montreal</span></div>
+        <div class="glance-row"><span class="glance-label">The journey</span><span class="glance-value">VIA Rail Business — comfortable</span></div>
+        <div class="glance-row"><span class="glance-label">Canada Day</span><span class="glance-value good">In Toronto — AGO + theater</span></div>
+        <div class="glance-row"><span class="glance-label">Theater nights</span><span class="glance-value good">2 — Montreal + Toronto</span></div>
+        <div class="glance-row"><span class="glance-label">Key cultural stops</span><span class="glance-value">MMFA, D&amp;Q, AGO, Distillery, Mirvish</span></div>
+        <div class="glance-row"><span class="glance-label">Bookshop potential</span><span class="glance-value good">High — Drawn &amp; Quarterly + Type Books</span></div>
+        <div class="glance-row"><span class="glance-label">Train reliability</span><span class="glance-value good">Low risk — established corridor</span></div>
+        <div class="glance-row"><span class="glance-label">Pace</span><span class="glance-value">Two cities, broader sweep</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SMOKED MEAT -->
+<div style="background:#faf8f4; padding: 56px 32px;">
+  <div style="max-width: 680px; margin: 0 auto; text-align: center;">
+    <div class="section-label">One More Thing</div>
+    <div class="section-title" style="margin-bottom:20px;">Schwartz's. On the List.</div>
+    <p style="font-size:17px; color:#444; line-height:1.8;">This trip is going to have plenty of room for both of us to put things on the agenda. That's the whole point. Schwartz's is mine — I've had it on my list for about 20 years. It's been on Boulevard Saint-Laurent since 1928 and people still line up outside. It's primarily a smoked meat place so the menu won't be for everyone, but I'd love it if we could at least stop by. Fries and pickles are pretty great too.</p>
+    <p style="font-size:14px; color:#888; margin-top:20px;"><a href="https://www.schwartzsdeli.com" target="_blank" style="color:#888;">Schwartz's Hebrew Delicatessen</a> &nbsp;·&nbsp; 3895 Boulevard Saint-Laurent, Montreal</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Both options depart Indianapolis June 28 and return July 2, 2026. I've done the research on flights, hotels, and trains. Let me know which direction you want to go and I'll get it booked.<br>
+  <a href="https://docs.google.com/document/d/1iINdphwQIx-X98ednJnK69t56q3-pwOizZKJzzEOdds/edit">Full planning notes with costs and booking details</a></p>
+</div>
+
+</body>
+</html>
